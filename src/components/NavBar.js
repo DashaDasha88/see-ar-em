@@ -6,8 +6,6 @@ const NavBar = () => {
 
   return (
     <nav>
-      <div className="logo-container">
-      </div>
       <div className="controls-container">
         <div className="icon" onClick={() => navigate("/ticket")}>+</div>
         <div className="icon" onClick={() => navigate("/")}>//</div>
