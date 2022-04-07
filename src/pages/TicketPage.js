@@ -181,7 +181,7 @@ const TicketPage = () => {
             />
             <div>
               {formData.avatar && (
-                <img/>
+                <img src={formData.avatar} alt="image preview" />
               )}
             </div>
 
