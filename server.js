@@ -6,7 +6,7 @@ const axios = require('axios');
 
 const app = express();
 app.use(cors());
-app.use(express.json())
+app.use(express.json());
 
 const url = 'https://5f2364f5-1e36-4a45-b6ec-6997db178182-us-east1.apps.astra.datastax.com/api/rest/v2/namespaces/tickets/collections/tasks';
 const token = 'AstraCS:UHXhWRopUJBONnQeQTnpLXeT:87211e9d678e56b5f7d1784ceb0131d4a2d0081fd6b7c42d401e5bcbfc4df2e4';
