@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CategoriesContext from "../context";
 
 const TicketPage = () => {
 
@@ -11,6 +12,8 @@ const TicketPage = () => {
   })
 
   const editMode = false;
+  const { categories, setCategories } = useContext(CategoriesContext)
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -37,8 +40,6 @@ const TicketPage = () => {
       })
     )
   }
-
-  const categories = ["test1", "test2"]
 
   console.log(formData)
 
@@ -71,7 +72,7 @@ const TicketPage = () => {
             <label>Categroy</label>
             <select
               name="category"
-              value={formData.category}
+              value={formData.category || categories[0] }
               onChange={handleChange}
             >
               {categories?.map((category, _index) => (
